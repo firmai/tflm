@@ -103,8 +103,11 @@ mse = mean_squared_error(add_second_y, preds)
 print(mse)
 #Score Achieved = 0.55
 ```
+That is a performance improvement of more than 20% by using exactely the same data !!
 
-That is a performance improvement of more than 20% by using exactely the same data!!
+That does not mean it always performs better than the standard data format; here is a Google Colab [example](https://colab.research.google.com/drive/1oEnsZ37FW266zdRK2Qa7del0T0ly-xKy) where this method performs poorly because of a lack of data. 
+
+
 
 ## Reasons
 
