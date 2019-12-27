@@ -104,7 +104,7 @@ print(mse)
 
 That is a performance improvement of more than 20% by using exactely the same data!!
 
-### Reasons
+## Reasons
 
 There are many reasons for transformation. In practice, a transformation often works, serendipitously, to do several of these at once, particularly to reduce skewness, to produce nearly equal spreads and to produce a nearly linear or additive relationship. But this is not guaranteed.
 
