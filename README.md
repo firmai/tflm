@@ -1,4 +1,4 @@
-# Advanced Transformations and Interactions for Linear Models 
+# Transformations and Interactions for Linear Models 
 With Feature Generation and Selection Techniques
 
 The package is nice and simple and boils down to one command.
