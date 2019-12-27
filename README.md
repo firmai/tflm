@@ -17,7 +17,7 @@ lm = linear_model.LinearRegression()
 lm = lm.fit(Train_lin_X, Train_lin_y)
 ```
 
-In data analysis transformation is the replacement of a variable by a function of that variable: for example, replacing a variable x by the square root of x or the logarithm of x. In a stronger sense, a transformation is a replacement that changes the shape of a distribution or relationship.
+In data analysis, transformation is the replacement of a variable by a function of that variable: for example, replacing a variable x by the square root of x or the logarithm of x. In a stronger sense, a transformation is a replacement that changes the shape of a distribution or relationship. Interactions arise when considering the relationship among three or more variables. It describes a situation in which the effect of one variable on an outcome depends on the state of a second variable. Interaction terms can be created in various ways such as the product of x and y or the ratio of x and y. 
 
 
 #### Description
