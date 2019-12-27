@@ -16,7 +16,9 @@ lm = linear_model.LinearRegression()
 lm = lm.fit(X_train,y_train)
 ```
 
-### Examples
+### Example
+
+Download Dataset
 
 ```python
 import tflm
@@ -90,9 +92,15 @@ pip install ffood
 1. Linear Models are Needed At Times When Latency Becomes An Important Concern
 
 ### How
-1. Neural Network Identifies Important Features
-1. Important Features 
-1. Gradient Boosting Model Identifies Important Feature Interaction Pairs a
+1. MLP Neural Network Identifies the most Important Features for Interaction and Selection
+1. The Most Important Single Standing Features Are Tranformed
+  1. POWER_2 (square) LOG (log plus 1) RECIP (reciprocal) SQRT (square root plus 1)
+1. Gradient Boosting Model uses the MLP Identified Important Features to Select a Subset of Important Interaction Pairs
+1. The Most Important Interaction Pairs are Interacted
+  1. a_X_b, b_X_c, k_X_a, c_X_h, c_X_s
+1. All Transformations Are Fed as Input into an MLP model and Selected to X% (default 90%) Feature Contribution
+1. The Whole Process is Repeated One More Time So That Higher Dimensional Interaction Can Take Place imagine k_POWER_a_X_c_X_h
+1. Finally a Lasso Regression Selects Features from a Validation Set Using the LARS algorithm 
 
 
 In data analysis transformation is the replacement of a variable by a function of that variable: for example, replacing a variable x by the square root of x or the logarithm of x. In a stronger sense, a transformation is a replacement that changes the shape of a distribution or relationship.
