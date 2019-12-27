@@ -1,4 +1,5 @@
-# Advanced Transformations for Linear Models with Feature Generation and Selection Techniques
+# Advanced Transformations for Linear Models 
+With Feature Generation and Selection Techniques
 
 The package is nice and simple and boils down to one command.
 
@@ -34,9 +35,9 @@ pip install tflm
 ### How
 1. MLP Neural Network Identifies the Most Important Features for Interaction and Selection 
 1. All Feature Importance and Feature Interaction Values are Based on SHAP (SHapley Additive exPlanations)
-1. The Most Important Single Standing Features are Tranformed - **POWER_2** (square) **LOG** (log plus 1) **RECIP** (reciprocal) **SQRT** (square root plus 1)
+1. The Most Important Single Standing Features are Tranformed **POWER_2** (square) **LOG** (log plus 1) **RECIP** (reciprocal) **SQRT** (square root plus 1)
 1. Gradient Boosting Model uses the MLP Identified Important Features to Select a Subset of Important Interaction Pairs
-1. The Most Important Interaction Pairs are Interacted - **a_X_b** (multiplication) **c_DIV_h** (division) 
+1. The Most Important Interaction Pairs are Interacted **a_X_b** (multiplication) **c_DIV_h** (division) 
 1. All Transformations are Fed as Input into an MLP model and Selected to **X%** (default 90%) Feature Contribution
 1. The Whole Process is Repeated One More Time So That Higher Dimensional Interaction Can Take Place imagine **a_POWER_b_X_c_DIV_h**
 1. Finally a Lasso Regression Selects Features from a Validation Set Using the LARS algorithm 
