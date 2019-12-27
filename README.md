@@ -209,4 +209,4 @@ The most useful transformations in introductory data analysis are the
     positive, given that (-x)^2 and x^2 are identical.
 
 
-
+Additional information on tranformations, and a blog post partly inspiring the use of transformations in this package and the content in this readm can be found [here](http://fmwww.bc.edu/repec/bocode/t/transint.html). 
