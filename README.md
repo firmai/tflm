@@ -5,7 +5,7 @@ The package is nice and simple and boils down to one command.
 
 ```python
 import tflm
-
+target = "target"
 Train_lin_X,Train_lin_y, Test_lin_X, Test_lin_y = tflm.runner(Train, Test, Target)
 ```
 
@@ -56,6 +56,7 @@ X = pd.DataFrame(dataset['data'])
 X["target"] = dataset["target"]
 first = X.sample(int(len(X)/2))
 second = X[~X.isin(first)].dropna()
+target = "target"
 
 X_train, y_train, X_test, y_test = tflm.runner(first, second, target)
 ```
