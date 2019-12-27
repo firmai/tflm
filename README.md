@@ -1,5 +1,88 @@
 # Transformations for Linear Models
 
+The package is nice and simple and boils down to one command.
+
+```python
+import tflm
+
+Train_lin_X,Train_lin_y, Test_lin_X, Test_lin_y = tflm.runner(Train, Test, Target)
+```
+
+Now just add it to your linear model
+
+```python
+from sklearn import linear_model
+lm = linear_model.LinearRegression()
+lm = lm.fit(X_train,y_train)
+```
+
+### Examples
+
+```python
+import tflm
+import sklearn.datasets
+from sklearn import linear_model
+
+dataset = sklearn.datasets.fetch_california_housing()
+X = pd.DataFrame(dataset['data'])
+X["target"] = dataset["target"]
+first = X.sample(int(len(X)/2))
+second = X[~X.isin(first)].dropna()
+
+X_train, y_train, X_test, y_test = runner(first, second, target)
+```
+Modelling and MSE Score
+
+```python
+
+from sklearn import linear_model
+lm = linear_model.LinearRegression()
+lm = lm.fit(X_train,y_train)
+preds = lm.predict(X_test)
+
+mse = mean_squared_error(y_test, preds)
+print(mse)
+#Score Achieved = 0.43
+
+```
+
+Compare Performance With Untransformed Features
+
+```python
+
+import pandas as pd
+from sklearn import preprocessing
+
+def scaler(df):
+  x = df.values #returns a numpy array
+  min_max_scaler = preprocessing.MinMaxScaler()
+  x_scaled = min_max_scaler.fit_transform(x)
+  df = pd.DataFrame(x_scaled)
+  return df
+
+add_first_y = first[target]
+add_first = scaler(first.drop([target],axis=1))
+
+add_second_y = second[target]
+add_second = scaler(second.drop([target],axis=1)) 
+
+from sklearn import linear_model
+#clf = linear_model.Lasso(alpha=0.4)
+clf = linear_model.LinearRegression()
+preds = clf.fit(add_first,add_first_y).predict(add_second)
+mse = mean_squared_error(add_second_y, preds)
+print(mse)
+#Score Achieved = 0.55
+```
+
+That is a performance improvement of more than 20% by using exactely the same data!!
+
+#### Description
+
+```
+pip install ffood
+```
+
 ### Use Cases
 1. General Automated Feature Generation for Linear Models and Gradient Boosting Models (LightGBM, CatBoost, XGBoost)
 1. Transformation of Higher-Dimensional Feature Space to Lower-Dimensional Feature Space.
