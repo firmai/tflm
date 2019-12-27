@@ -93,13 +93,11 @@ pip install ffood
 
 ### How
 1. MLP Neural Network Identifies the most Important Features for Interaction and Selection
-1. The Most Important Single Standing Features Are Tranformed
-  1. POWER_2 (square) LOG (log plus 1) RECIP (reciprocal) SQRT (square root plus 1)
+1. The Most Important Single Standing Features Are Tranformed - **POWER_2** (square) **LOG** (log plus 1) **RECIP** (reciprocal) **SQRT** (square root plus 1)
 1. Gradient Boosting Model uses the MLP Identified Important Features to Select a Subset of Important Interaction Pairs
-1. The Most Important Interaction Pairs are Interacted
-  1. a_X_b, b_X_c, k_X_a, c_X_h, c_X_s
-1. All Transformations Are Fed as Input into an MLP model and Selected to X% (default 90%) Feature Contribution
-1. The Whole Process is Repeated One More Time So That Higher Dimensional Interaction Can Take Place imagine k_POWER_a_X_c_X_h
+1. The Most Important Interaction Pairs are Interacted - **a_X_b**, **b_X_c**, **k_X_a**, **c_DIV_h**, **c_DIV_s**
+1. All Transformations Are Fed as Input into an MLP model and Selected to **X%** (default 90%) Feature Contribution
+1. The Whole Process is Repeated One More Time So That Higher Dimensional Interaction Can Take Place imagine **k_POWER_a_X_c_DIV_h**
 1. Finally a Lasso Regression Selects Features from a Validation Set Using the LARS algorithm 
 
 
