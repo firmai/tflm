@@ -1,4 +1,4 @@
-# Transformations for Linear Models
+# Advanced Transformations for Linear Models with Feature Generation and Selection Techniques
 
 The package is nice and simple and boils down to one command.
 
