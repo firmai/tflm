@@ -16,6 +16,31 @@ lm = linear_model.LinearRegression()
 lm = lm.fit(X_train,y_train)
 ```
 
+In data analysis transformation is the replacement of a variable by a function of that variable: for example, replacing a variable x by the square root of x or the logarithm of x. In a stronger sense, a transformation is a replacement that changes the shape of a distribution or relationship.
+
+
+#### Description
+
+```
+pip install tflm
+```
+
+### Use Cases
+1. General Automated Feature Generation for Linear Models and Gradient Boosting Models (LightGBM, CatBoost, XGBoost)
+1. Transformation of Higher-Dimensional Feature Space to Lower-Dimensional Feature Space.
+1. Features Automatically Generated and Selected to Imitate the Performance of Non-linear models
+1. Linear Models are Needed At Times When Latency Becomes An Important Concern
+
+### How
+1. MLP Neural Network Identifies the most Important Features for Interaction and Selection 
+1. All Feature Importance and Feature Interaction Values are Based on SHAP (SHapley Additive exPlanations)
+1. The Most Important Single Standing Features Are Tranformed - **POWER_2** (square) **LOG** (log plus 1) **RECIP** (reciprocal) **SQRT** (square root plus 1)
+1. Gradient Boosting Model uses the MLP Identified Important Features to Select a Subset of Important Interaction Pairs
+1. The Most Important Interaction Pairs are Interacted - **a_X_b** (multiplication) **c_DIV_h** (division) 
+1. All Transformations Are Fed as Input into an MLP model and Selected to **X%** (default 90%) Feature Contribution
+1. The Whole Process is Repeated One More Time So That Higher Dimensional Interaction Can Take Place imagine **a_POWER_b_X_c_DIV_h**
+1. Finally a Lasso Regression Selects Features from a Validation Set Using the LARS algorithm 
+
 ### Example
 
 Download Dataset
@@ -78,30 +103,6 @@ print(mse)
 ```
 
 That is a performance improvement of more than 20% by using exactely the same data!!
-
-#### Description
-
-```
-pip install ffood
-```
-
-### Use Cases
-1. General Automated Feature Generation for Linear Models and Gradient Boosting Models (LightGBM, CatBoost, XGBoost)
-1. Transformation of Higher-Dimensional Feature Space to Lower-Dimensional Feature Space.
-1. Features Automatically Generated and Selected to Imitate the Performance of Non-linear models
-1. Linear Models are Needed At Times When Latency Becomes An Important Concern
-
-### How
-1. MLP Neural Network Identifies the most Important Features for Interaction and Selection
-1. The Most Important Single Standing Features Are Tranformed - **POWER_2** (square) **LOG** (log plus 1) **RECIP** (reciprocal) **SQRT** (square root plus 1)
-1. Gradient Boosting Model uses the MLP Identified Important Features to Select a Subset of Important Interaction Pairs
-1. The Most Important Interaction Pairs are Interacted - **a_X_b** (multiplication) **c_DIV_h** (division) 
-1. All Transformations Are Fed as Input into an MLP model and Selected to **X%** (default 90%) Feature Contribution
-1. The Whole Process is Repeated One More Time So That Higher Dimensional Interaction Can Take Place imagine **a_POWER_b_X_c_DIV_h**
-1. Finally a Lasso Regression Selects Features from a Validation Set Using the LARS algorithm 
-
-
-In data analysis transformation is the replacement of a variable by a function of that variable: for example, replacing a variable x by the square root of x or the logarithm of x. In a stronger sense, a transformation is a replacement that changes the shape of a distribution or relationship.
 
 ### Reasons
 
