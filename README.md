@@ -57,7 +57,7 @@ X["target"] = dataset["target"]
 first = X.sample(int(len(X)/2))
 second = X[~X.isin(first)].dropna()
 
-X_train, y_train, X_test, y_test = runner(first, second, target)
+X_train, y_train, X_test, y_test = tflm.runner(first, second, target)
 ```
 Modelling and MSE Score
 
