@@ -1,4 +1,4 @@
-# Advanced Transformations for Linear Models 
+# Advanced Transformations and Interactions for Linear Models 
 With Feature Generation and Selection Techniques
 
 The package is nice and simple and boils down to one command.
@@ -14,7 +14,7 @@ Now just add it to your linear model
 ```python
 from sklearn import linear_model
 lm = linear_model.LinearRegression()
-lm = lm.fit(X_train,y_train)
+lm = lm.fit(Train_lin_X, Train_lin_y)
 ```
 
 In data analysis transformation is the replacement of a variable by a function of that variable: for example, replacing a variable x by the square root of x or the logarithm of x. In a stronger sense, a transformation is a replacement that changes the shape of a distribution or relationship.
