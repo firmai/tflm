@@ -49,6 +49,12 @@ In data analysis, transformation is the replacement of a variable by a function 
 1. The Whole Process is Repeated One More Time So That Higher Dimensional Interaction Can Take Place imagine **a_POWER_b_X_c_DIV_h**
 1. Finally a **Lasso** Regression Selects Features from a Validation Set Using the **LARS algorithm** 
 
+### To Do
+1. Current parameter selection is based on data characteristics and bayesian hyperparameter optimisation could help.
+1. Method for undoing interactions and transformations to identify original feature importance. 
+1. Optimisation for users without access to GPUs (for now, you can use model="LightGBM" paramater).
+
+
 ### Example
 
 Download Dataset
