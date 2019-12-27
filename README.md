@@ -67,7 +67,7 @@ from sklearn import linear_model
 dataset = sklearn.datasets.fetch_california_housing()
 X = pd.DataFrame(dataset['data'])
 X["target"] = dataset["target"]
-first = X.sample(int(len(X)/2))
+first = X.sample(int(len(X)/2))  # random selection leading to different scores
 second = X[~X.isin(first)].dropna()
 target = "target"
 
