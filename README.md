@@ -16,6 +16,7 @@ from sklearn import linear_model
 lm = linear_model.LinearRegression()
 lm = lm.fit(Train_lin_X, Train_lin_y)
 ```
+For now this only works with regression problems (continuous targets)
 
 #### Install
 
