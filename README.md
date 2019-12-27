@@ -40,14 +40,14 @@ In data analysis, transformation is the replacement of a variable by a function 
 1. Linear Models are Needed at Times When Latency Becomes an Important Concern
 
 ### How
-1. MLP Neural Network Identifies the Most Important Features for Interaction and Selection 
-1. All Feature Importance and Feature Interaction Values are Based on SHAP (SHapley Additive exPlanations)
+1. **MLP** Neural Network Identifies the Most Important Features for Interaction and Selection 
+1. All Feature Importance and Feature Interaction Values are Based on **SHAP** (SHapley Additive exPlanations)
 1. The Most Important Single Standing Features are Tranformed **POWER_2** (square) **LOG** (log plus 1) **RECIP** (reciprocal) **SQRT** (square root plus 1)
-1. Gradient Boosting Model uses the MLP Identified Important Features to Select a Subset of Important Interaction Pairs
+1. **GBM** Gradient Boosting Model uses the **MLP** Identified Important Features to Select a Subset of Important Interaction Pairs
 1. The Most Important Interaction Pairs are Interacted **a_X_b** (multiplication) **c_DIV_h** (division) 
-1. All Transformations are Fed as Input into an MLP model and Selected to **X%** (default 90%) Feature Contribution
+1. All Transformations are Fed as Input into an **MLP** model and Selected to **X%** (default 90%) Feature Contribution
 1. The Whole Process is Repeated One More Time So That Higher Dimensional Interaction Can Take Place imagine **a_POWER_b_X_c_DIV_h**
-1. Finally a Lasso Regression Selects Features from a Validation Set Using the LARS algorithm 
+1. Finally a **Lasso** Regression Selects Features from a Validation Set Using the **LARS algorithm** 
 
 ### Example
 
@@ -135,7 +135,7 @@ When looking at relationships between variables, it is often far easier to think
 5. **Additive relationships**
 Relationships are often easier to analyse when additive rather than (say) multiplicative. Additivity is a vital issue in analysis of variance.
 
-## Transformations Implemented Here
+## Transformations Implemented
 
 
 
