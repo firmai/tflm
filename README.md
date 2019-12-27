@@ -1,4 +1,4 @@
-# Transformations for Linear Models
+# Advanced Transformation for Linear Models
 
 The package is nice and simple and boils down to one command.
 
