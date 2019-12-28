@@ -1,6 +1,12 @@
 # Transformations and Interactions for Linear Models 
 With Feature Generation and Selection Techniques
 
+#### Install
+
+```
+pip install tflm
+```
+
 The package is nice and simple and boils down to one command.
 
 ```python
@@ -23,11 +29,7 @@ lm = lm.fit(Train_lin_X, Train_lin_y)
 ```
 For now this only works with regression problems (continuous targets)
 
-#### Install
 
-```
-pip install tflm
-```
 
 ### Description
 
