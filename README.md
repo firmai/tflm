@@ -1,6 +1,6 @@
 # Transformations and Interactions for Linear Models 
 
-The first automated package for data driven feature transformation, interaction, and selection to achieve optimal linearity
+The first automated package for data driven feature transformation, interaction, and selection to develop fast linear models.
 
 #### Install
 
