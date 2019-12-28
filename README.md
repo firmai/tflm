@@ -74,6 +74,7 @@ second = X[~X.isin(first)].dropna()
 target = "target"
 
 X_train, y_train, X_test, y_test = tflm.runner(first, second, target)
+#train_data, train_output, test_data, test_output = runner(first, second, target, contribution_portion=0.7, final_contribution=0.80, deflator=0.6) 
 ```
 Modelling and MSE Score
 
