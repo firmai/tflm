@@ -61,6 +61,7 @@ In data analysis, transformation is the replacement of a variable by a function 
 1. Current parameter selection is based on data characteristics and bayesian hyperparameter optimisation could help.
 1. The AutoKeras team told me they are working on an automated model for tabular regression problems. 
 1. Method for undoing interactions and transformations to identify original feature importance. 
+1. Develop a method for classification tasks. 
 1. Optimisation for users without access to GPUs (for now, you can use model="LightGBM" paramater).
 1. Make each generation a little less random. 
 
