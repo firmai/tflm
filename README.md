@@ -8,8 +8,9 @@ import tflm
 target = "target"
 Train_lin_X,Train_lin_y, Test_lin_X, Test_lin_y = tflm.runner(Train, Test, Target)
 
-## If you are having problems (i.e. too many features), adjust the following default parameters lower (between 0.0 and 1.0) ..
-## ...for now this is experimental: contribution_portion=0.9, final_contribution=0.95, deflator=0.7
+## If you run into obstacles (i.e. too many features for multivariate regression/low memory) ...
+## ...adjust the following default parameters lower (between 0.0 and 1.0) for now this is experimental ...
+## ...contribution_portion=0.9, final_contribution=0.95, deflator=0.7
 ## ...and a few others, very experimental: inter_portion=0.8, sqr_portion=0.8, runs=2
 ```
 
