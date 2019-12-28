@@ -55,6 +55,7 @@ In data analysis, transformation is the replacement of a variable by a function 
 1. The AutoKeras team told me they are working on an automated model for tabular regression problems. 
 1. Method for undoing interactions and transformations to identify original feature importance. 
 1. Optimisation for users without access to GPUs (for now, you can use model="LightGBM" paramater).
+1. Make each generation a little less random. 
 
 
 ### Example
@@ -121,7 +122,7 @@ print(mse)
 ```
 That is a performance improvement of more than 20% by using exactely the same data !!
 
-That does not mean it always performs better than the standard data format; here is a Google Colab [example](https://colab.research.google.com/drive/1oEnsZ37FW266zdRK2Qa7del0T0ly-xKy) where this method performs poorly because of a lack of data. 
+That does not mean it always performs better than the standard data format; here is a Google Colab [example](https://colab.research.google.com/drive/1oEnsZ37FW266zdRK2Qa7del0T0ly-xKy) where this method performs poorly because of a lack of data. Here is works okay, [colab](https://colab.research.google.com/drive/1IcTYWvHCAGbNLYJbHSIRHmYZrH2X07UF).  
 
 
 
