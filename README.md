@@ -67,7 +67,11 @@ In data analysis, transformation is the replacement of a variable by a function 
 1. Make each generation a little less random. 
 
 
-### Example
+### First Example
+
+We have a dataset of more than 500k songs. The task is to predict which year
+
+### Second Example
 
 Download Dataset and Activate Runner
 
